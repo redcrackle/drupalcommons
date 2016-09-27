@@ -237,7 +237,7 @@ function droogle_get_connection_settings_from_og($group_context = NULL) {
  *  Function connects to google drive.
  */
 function droogle_gdrive_connect($redirect_uri = NULL, $client_id = NULL, $client_secret = NULL, $refresh_token = NULL) {
-  require_once '/usr/share/nginx/html/taher/drupalcommons/sites/all/libraries/google-api-php-client-git-version-b2/autoload.php';
+  require_once $_SERVER['DOCUMENT_ROOT'] . '/sites/all/libraries/google-api-php-client-git-version-b2/autoload.php';
   $return_result = array();
   if ($path = libraries_get_path('google-api-php-client-git-version-b2')) {
     ini_set('include_path', ini_get('include_path') . ':' . $_SERVER['DOCUMENT_ROOT'] . '/sites/all/libraries/google-api-php-client-git-version-b2/src');
